@@ -21,9 +21,15 @@
     <ClCompile Include="SequentialMatMult.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="RowPartitionMatMult.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="SequentialMatMult.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="RowPartitionMatMult.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

@@ -144,9 +144,11 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="RowPartitionMatMult.cpp" />
     <ClCompile Include="SequentialMatMult.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="RowPartitionMatMult.h" />
     <ClInclude Include="SequentialMatMult.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

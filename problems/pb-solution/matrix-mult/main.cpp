@@ -5,6 +5,7 @@
 #include <random>
 #include <thread>
 #include <vector>
+#include "RowPartitionMatMult.h"
 
 std::random_device rd;
 std::mt19937 gen(rd());
@@ -67,8 +68,9 @@ int main()
 {
     std::vector<int> problem_sizes = {10, 50, 100, 500, 1000, 1500};
 
-    matrix_benchmark(SequentialMatMult::naive, problem_sizes);
+    matrix_benchmark(RowPartitionMatMult::compute, problem_sizes);
     matrix_benchmark(SequentialMatMult::forikj, problem_sizes);
+    matrix_benchmark(SequentialMatMult::naive, problem_sizes);
 
     return 0;
 }
