@@ -10,7 +10,7 @@ class SequentialMatMult
             {
                 for (int k = 0; k < N; k++)
                 {
-                    mC[i + N + j] += mA[i + N + k] * mB[k * N + j];
+                    mC[i * N + j] += mA[i * N + k] * mB[k * N + j];
                 }
             }
         }
@@ -24,7 +24,7 @@ class SequentialMatMult
             {
                 for (int j = 0; j < N; j++)
                 {
-                    mC[i + N + j] += mA[i + N + k] * mB[k * N + j];
+                    mC[i * N + j] += mA[i * N + k] * mB[k * N + j];
                 }
             }
         }
