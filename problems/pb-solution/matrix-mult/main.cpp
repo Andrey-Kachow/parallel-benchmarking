@@ -65,9 +65,10 @@ void matrix_benchmark(std::function<void(double*, double*, double*, int)> algori
 
 int main()
 {
-    std::vector<int> problem_sizes = {10, 100, 1000, 10000};
+    std::vector<int> problem_sizes = {10, 50, 100, 500, 1000, 1500};
 
     matrix_benchmark(SequentialMatMult::naive, problem_sizes);
+    matrix_benchmark(SequentialMatMult::forikj, problem_sizes);
 
     return 0;
 }
