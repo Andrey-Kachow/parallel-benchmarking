@@ -3,6 +3,7 @@
 #include "matrix.h"
 #include <SequentialMatMult.h>
 #include <vector>
+#include <RowPartitionMatMult.h>
 
 TEST(TestCaseName, TestName)
 {
@@ -47,16 +48,12 @@ TEST(TestBasic5x5, TestMatrixMultiplication)
          m2[i] = vM2[i];
      }
 
-     SequentialMatMult::naive(m1, m2, m3, N);
+     //SequentialMatMult::naive(m1, m2, m3, N);
+     //SequentialMatMult::forikj(m1, m2, m3, N);
+     RowPartitionMatMult::compute(m1, m2, m3, N); // TODO: Debug
 
      for (int i = 0; i < N * N; i++)
      {
-         std::cout << "Trying " << vM3_expected[i] << " vs " << m3[i] << std::endl;
-     }
-
-     for (int i = 0; i < N * N; i++)
-     {
-         std::cout << "Trying " << i << std::endl;
          EXPECT_EQ(vM3_expected[i], m3[i]);
      }
 
