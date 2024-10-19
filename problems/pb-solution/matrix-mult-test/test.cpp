@@ -51,7 +51,7 @@ TEST(TestBasic5x5, TestMatrixMultiplication)
      //SequentialMatMult::naive(m1, m2, m3, N);
      //SequentialMatMult::forikj(m1, m2, m3, N);
      RowPartitionMatMult::compute(m1, m2, m3, N); // TODO: Debug
-
+     
      for (int i = 0; i < N * N; i++)
      {
          EXPECT_EQ(vM3_expected[i], m3[i]);

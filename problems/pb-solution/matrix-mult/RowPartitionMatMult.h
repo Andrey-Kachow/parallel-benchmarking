@@ -1,6 +1,8 @@
 #pragma once
 #include <thread>
 #include <vector>
+#include "matrix.h"
+#include <iostream>
 
 constexpr int num_threads = 5;
 
@@ -37,7 +39,7 @@ class RowPartitionMatMult
             {
                 for (int k = 0; k < N; k++)
                 {
-                    mC[i * N + j] = mA[i * N + k] + mB[k * N + j];
+                    mC[i * N + j] += mA[i * N + k] * mB[k * N + j];
                 }
             }
         }
