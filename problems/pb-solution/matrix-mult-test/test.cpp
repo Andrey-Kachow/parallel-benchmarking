@@ -1,9 +1,9 @@
 #include "pch.h"
 
-#include "matrix.h"
-#include <SequentialMatMult.h>
+#include "matrix.hpp"
+#include <SequentialMatMult.hpp>
 #include <vector>
-#include <RowPartitionMatMult.h>
+#include <RowPartitionMatMult.hpp>
 
 TEST(TestCaseName, TestName)
 {

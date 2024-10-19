@@ -1,7 +1,7 @@
 #pragma once
 #include <thread>
 #include <vector>
-#include "matrix.h"
+#include "matrix.hpp"
 #include <iostream>
 
 constexpr int num_threads = 5;

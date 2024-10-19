@@ -149,9 +149,9 @@
     <ClCompile Include="SequentialMatMult.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="matrix.h" />
-    <ClInclude Include="RowPartitionMatMult.h" />
-    <ClInclude Include="SequentialMatMult.h" />
+    <ClInclude Include="matrix.hpp" />
+    <ClInclude Include="RowPartitionMatMult.hpp" />
+    <ClInclude Include="SequentialMatMult.hpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

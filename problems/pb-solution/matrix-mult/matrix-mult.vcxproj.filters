@@ -29,13 +29,13 @@
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="SequentialMatMult.h">
+    <ClInclude Include="SequentialMatMult.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="RowPartitionMatMult.h">
+    <ClInclude Include="RowPartitionMatMult.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="matrix.h">
+    <ClInclude Include="matrix.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

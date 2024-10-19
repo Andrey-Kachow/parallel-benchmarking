@@ -1,12 +1,12 @@
-#include "SequentialMatMult.h"
+#include "SequentialMatMult.hpp"
 #include <chrono>
 #include <functional>
 #include <iostream>
 #include <random>
 #include <thread>
 #include <vector>
-#include "RowPartitionMatMult.h"
-#include "matrix.h"
+#include "RowPartitionMatMult.hpp"
+#include "matrix.hpp"
 
 void matrix_benchmark(std::function<void(double*, double*, double*, int)> algorithm,
                       const std::vector<int>& problem_sizes)
