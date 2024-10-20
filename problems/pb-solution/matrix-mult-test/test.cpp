@@ -3,6 +3,7 @@
 #include "matrix.hpp"
 #include <SequentialMatMult.hpp>
 #include <vector>
+#include <memory>
 #include <RowPartitionMatMult.hpp>
 
 TEST(TestCaseName, TestName)
@@ -38,26 +39,14 @@ TEST(TestBasic5x5, TestMatrixMultiplication)
          2,  49, 5,  6,  0   /**/
      };
 
-     auto m1 = generate_matrix(N, true);
-     auto m2 = generate_matrix(N, true);
      auto m3 = generate_matrix(N, true);
 
-     for (int i = 0; i < N * N; i++)
-     {
-         m1[i] = vM1[i];
-         m2[i] = vM2[i];
-     }
-
-     //SequentialMatMult::naive(m1, m2, m3, N);
-     //SequentialMatMult::forikj(m1, m2, m3, N);
-     RowPartitionMatMult::compute(m1, m2, m3, N); // TODO: Debug
+     //SequentialMatMult::naive(vM1, vM2, *m3, N);
+     //SequentialMatMult::forikj(vM1, vM2, *m3, N);
+     RowPartitionMatMult::compute(vM1, vM2, *m3, N);
      
      for (int i = 0; i < N * N; i++)
      {
-         EXPECT_EQ(vM3_expected[i], m3[i]);
+         EXPECT_EQ(vM3_expected[i], m3->at(i));
      }
-
-     kill_matrix(m1);
-     kill_matrix(m2);
-     kill_matrix(m3);
  }
